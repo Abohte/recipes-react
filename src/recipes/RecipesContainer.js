@@ -1,12 +1,14 @@
-// src/recipes/RecipesContainer.js
+
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Title from '../components/Title'
 import RecipeItem, { recipeShape } from './RecipeItem'
+import RecipeEditor from './RecipeEditor'
 import './RecipesContainer.css'
 
-class RecipesContainer extends PureComponent {
+export class RecipesContainer extends PureComponent {
   static propTypes = {
     recipes: PropTypes.arrayOf(recipeShape).isRequired,
   }
@@ -20,6 +22,7 @@ class RecipesContainer extends PureComponent {
       <div className="recipes wrapper">
         <header>
           <Title content="Recipes" />
+          <RecipeEditor />
         </header>
 
         <main>

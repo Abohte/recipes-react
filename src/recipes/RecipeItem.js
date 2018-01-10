@@ -22,6 +22,7 @@ export const recipeShape = PropTypes.shape({
 
 class RecipeItem extends PureComponent {
   static propTypes = {
+<<<<<<< HEAD
     ...recipeShape.isRequired,
     toggleLikeRecipe: PropTypes.func.isRequired
   }
@@ -29,6 +30,8 @@ class RecipeItem extends PureComponent {
   toggleLike = () => {
     const { _id } = this.props
     this.props.toggleLikeRecipe(_id)
+=======
+>>>>>>> own
   }
 
   render() {

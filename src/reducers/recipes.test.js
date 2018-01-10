@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/reducers/recipes.test.js
 
 import reducer, { recipes } from './recipes'
@@ -40,5 +41,15 @@ describe('recipes reducer', () => {
     it('toggles recipe.liked', () => {
       expect(reducer(initialState, action)).toEqual(eventualState)
     })
+=======
+import recipes from './recipes'
+
+describe('recipes reducer', () => {
+  const reducer = recipes
+  const initialState = []
+
+  it('returns an empty array for the initial state', () => {
+    // expect(reducer()).to.eql(initialState)
+>>>>>>> own
   })
 })

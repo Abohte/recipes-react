@@ -7,7 +7,6 @@ import './LikeButton.css'
 
 class LikeButton extends PureComponent {
   static propTypes = {
-    onChange: PropTypes.func.isRequired,
     liked: PropTypes.bool
   }
 
@@ -21,7 +20,11 @@ class LikeButton extends PureComponent {
   }
 
   toggleLike() {
+<<<<<<< HEAD
     this.props.onChange()
+=======
+    console.log('[LikeButton]: Like button clicked!')
+>>>>>>> own
   }
 
   render() {
