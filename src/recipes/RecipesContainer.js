@@ -1,20 +1,20 @@
 // src/recipes/RecipesContainer.js
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Title from '../components/Title'
 import RecipeItem, { recipeShape } from './RecipeItem'
+import RecipeEditor from './RecipeEditor'
 import './RecipesContainer.css'
 
-class RecipesContainer extends PureComponent {
+export class RecipesContainer extends PureComponent {
   static propTypes = {
     recipes: PropTypes.arrayOf(recipeShape).isRequired,
-    updateRecipe: PropTypes.func.isRequired
   }
 
   renderRecipe = (recipe, index) => {
     return <RecipeItem
       key={index}
-      onChange={this.props.updateRecipe}
       { ...recipe }
     />
   }
@@ -24,6 +24,7 @@ class RecipesContainer extends PureComponent {
       <div className="recipes wrapper">
         <header>
           <Title content="Recipes" />
+          <RecipeEditor />
         </header>
 
         <main>
@@ -34,4 +35,8 @@ class RecipesContainer extends PureComponent {
   }
 }
 
-export default RecipesContainer
+const mapStateToProps = ({ recipes }) => ({
+  recipes
+})
+
+export default connect(mapStateToProps)(RecipesContainer)
