@@ -2,7 +2,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import Title from '../components/Title'
 import RecipeItem, { recipeShape } from './RecipeItem'
 import RecipeEditor from './RecipeEditor'

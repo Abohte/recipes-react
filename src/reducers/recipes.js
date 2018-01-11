@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-// src/reducers/recipes.js
-
-export const recipes = [
-=======
 import { CREATE_RECIPE } from '../actions/recipes/create'
 
-const recipes = [
->>>>>>> own
+export const recipes = [
   {
     _id: 'abcd123',
     title: 'Spanish Omelette',
@@ -49,7 +43,7 @@ const recipes = [
   },
 ]
 
-<<<<<<< HEAD
+
 export default function(state = recipes, action = {}) {
   if (action.type === 'TOGGLE_LIKE_RECIPE') {
     return state.map((recipe) => {
@@ -58,14 +52,15 @@ export default function(state = recipes, action = {}) {
     })
   }
   return state
-=======
-export default (state = recipes, { type, payload } = {}) => {
-  switch(type) {
-    case CREATE_RECIPE :
-      return [Object.assign({}, payload)].concat(state)
-
-    default :
-      return state
-  }
->>>>>>> own
 }
+
+// export default (state = recipes, { type, payload } = {}) => {
+//   switch(type) {
+//     case CREATE_RECIPE :
+//       return [Object.assign({}, payload)].concat(state)
+//
+//     default :
+//       return state
+//   }
+//
+// }
