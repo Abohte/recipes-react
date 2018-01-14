@@ -1,8 +1,6 @@
-export const CREATE_RECIPE = 'CREATE_RECIPE'
-
-export default (newRecipe) => {
+export const createRecipe = (newRecipe) => {
   return {
-    type: CREATE_RECIPE,
+    type: 'CREATE_RECIPE',
     payload: newRecipe
   }
 }
