@@ -75,6 +75,11 @@ export default class ApiClient {
   }
 
   // Create a full URL to our API, including the host and path
+
+  // createUrl(path) {
+  //   return `${process.env.HOST || `http://localhost:${process.env.PORT || 3030}`}${path}`
+  //     .replace(/\/\//g, '/')
+  // }
   createUrl(path) {
     return [this.host, path].join('/')
   }

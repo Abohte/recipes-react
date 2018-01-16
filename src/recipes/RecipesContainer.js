@@ -14,7 +14,8 @@ export class RecipesContainer extends PureComponent {
   }
 
   componentWillMount() {
-    this.props.dispatch(fetchRecipes())
+    // this.props.dispatch(fetchRecipes())
+    this.props.fetchRecipes() //see mapDispatchToProps at bottom
   }
 
   renderRecipe = (recipe, index) => {
@@ -44,4 +45,6 @@ const mapStateToProps = ({ recipes }) => ({ recipes })
 //   return { recipes: store.recipes }
 // }
 
-export default connect(mapStateToProps)(RecipesContainer)
+const mapDispatchToProps = { fetchRecipes }
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer)
