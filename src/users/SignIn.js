@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import signIn from '../actions/user/sign-in'
 import Title from '../components/Title'
+import { Link } from 'react-router-dom'
 
 export class SignIn extends PureComponent {
   constructor() {
@@ -94,6 +96,10 @@ export class SignIn extends PureComponent {
           </div>
           <input type="submit" value="Sign in" />
         </form>
+        <br />
+        {"Don't have an account yet? "}
+        <Link to={`/sign-up`}>Sign up</Link>
+
       </div>
     )
   }
