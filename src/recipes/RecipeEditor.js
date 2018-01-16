@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import 'medium-editor/dist/css/medium-editor.css'
 import 'medium-editor/dist/css/themes/default.css'
 import './RecipeEditor.css'
-import { createRecipe } from '../actions/recipes/create'
+import { createRecipe } from '../actions/recipes'
 
 const TYPES = [
   'vegan',

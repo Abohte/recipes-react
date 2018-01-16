@@ -21,24 +21,41 @@ export default class ApiClient {
   // Returns: Promise
   get(path) {
     return request
-      .get(path)
+      .get(this.createUrl(path))
       .set(this.headers())
+      // .then(res => console.log(res.body))
+      // .catch(err => console.log(err))
   }
 
   post(path, data = {}) {
     // FILL IN!
+    return request
+      .post(this.createUrl(path))
+      .set(this.headers())
+      .send(data)
   }
 
   put(path, data = {}) {
     // FILL IN!
+    return request
+      .put(this.createUrl(path))
+      .set(this.headers())
+      .send(data)
   }
 
   patch(path, data = {}) {
     // FILL IN!
+    return request
+      .patch(this.createUrl(path))
+      .set(this.headers())
+      .send(data)
   }
 
   delete(path) {
     // FILL IN!
+    return request
+      .delete(this.createUrl(path))
+      .set(this.headers())
   }
 
   headers() {

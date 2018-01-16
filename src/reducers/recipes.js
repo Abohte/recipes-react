@@ -1,3 +1,9 @@
+import {
+  TOGGLE_LIKE_RECIPE,
+  FETCHED_RECIPES,
+  CREATE_RECIPE
+} from '../actions/recipes'
+
 export const recipes = [
   {
     _id: 'abcd123',
@@ -41,17 +47,26 @@ export const recipes = [
   },
 ]
 
+const newId = (state) => {
+  const ids = state
+    .map((recipe) => recipe._id)
+    .sort()
+  return ['abcd', parseInt(ids[ids.length - 1].split('abcd')[1], 10) + 1].join('')
+}
 
 export default function(state = recipes, action = {}) {
     switch(action.type) {
-      case 'TOGGLE_LIKE_RECIPE' :
+      case TOGGLE_LIKE_RECIPE :
         return state.map((recipe) => {
           if (recipe._id !== action.payload) return recipe
           return { ...recipe, liked: !recipe.liked }
         })
 
-      case 'CREATE_RECIPE' :
-        return [Object.assign({}, action.payload)].concat(state)
+      case CREATE_RECIPE :
+        return [{ ...action.payload, _id: newId(state) }].concat(state)
+
+      case FETCHED_RECIPES :
+        return [...action.payload]
 
       default :
         return state
