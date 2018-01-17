@@ -1,4 +1,5 @@
 import ApiClient from '../../api/client'
+import { push } from 'react-router-redux'
 
 const api = new ApiClient()
 export const USER_SIGNED_IN = 'USER_SIGNED_IN'
@@ -10,7 +11,8 @@ export default (user) => {
         api.storeToken(res.body.token);
         api.get('users/me')
           .then(res => {
-            dispatch({ type: 'USER_SIGNED_IN', payload: res.body })
+            dispatch({ type: USER_SIGNED_IN, payload: res.body })
+            dispatch(push(''))
           })
           .catch((err) => console.error(err))
       })
