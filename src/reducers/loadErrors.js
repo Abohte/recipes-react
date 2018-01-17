@@ -1,8 +1,8 @@
-import { LOAD_ERROR, CLEAR_ERROR } from '../actions/loading'
+import { LOAD_ERRORS, CLEAR_ERROR } from '../actions/loading'
 
 export default (state = [], { type, payload } = {}) => {
   switch (type) {
-    case LOAD_ERROR :
+    case LOAD_ERRORS :
       if (payload instanceof Error) {
         return state.concat(payload.message)
       }

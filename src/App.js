@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Routes from './routes'
 import Loading from './components/Loading'
-import LoadError from './components/LoadError'
+import LoadErrors from './components/LoadErrors'
 
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Loading />
-        <LoadError />
+        <LoadErrors />
         <Routes />
       </div>
     )

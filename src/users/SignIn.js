@@ -17,7 +17,7 @@ export class SignIn extends PureComponent {
         email: this.refs.email.value,
         password: this.refs.password.value
       }
-      this.props.SignIn(user)
+      this.props.signIn(user)
     }
   }
 
@@ -75,7 +75,7 @@ export class SignIn extends PureComponent {
   render() {
     return (
       <div className="sign-in form">
-        <Title content="Sign Up" />
+        <Title content="Sign In" />
 
         <form onSubmit={this.submitForm.bind(this)}>
           <div className="input">

@@ -1,9 +1,9 @@
 import recipes from './recipes'
 import loading from './loading'
-import loadError from './loadError'
+import loadErrors from './loadErrors'
 
 export default {
   recipes,
   loading,
-  loadError
+  loadErrors
 }
