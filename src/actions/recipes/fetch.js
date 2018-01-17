@@ -7,9 +7,9 @@ const api = new ApiClient()
 export default () => {
   return dispatch => {
     const path = 'recipes'
-    const errorTest = new Error('error test')
+    // const errorTest = new Error('error test')
     dispatch(loading(path, true))
-    dispatch(loadErrors(errorTest))
+    // dispatch(loadErrors(errorTest))
 
     api.get(path)
       .then(res => dispatch({ type: FETCHED_RECIPES, payload: res.body }))

@@ -1,6 +1,7 @@
 import ApiClient from '../../api/client'
 
 const api = new ApiClient()
+export const USER_SIGNED_IN = 'USER_SIGNED_IN'
 
 export default (user) => {
   return dispatch => {
@@ -11,6 +12,7 @@ export default (user) => {
           .then(res => {
             dispatch({ type: 'USER_SIGNED_IN', payload: res.body })
           })
+          .catch((err) => console.error(err))
       })
       .catch((err) => console.error(err))
 
