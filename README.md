@@ -2,7 +2,7 @@
 
 React app made during week 5-6 of the 9-week Codaisseur Academy. The backend for this app can be found [here](https://github.com/Abohte/recipes-express).
 
-This app, that contains a list of recipes, was meant to get to know React / Redux, Express, MongoDB and Material-UI.
+This app, containing a list of recipes, was an exercise to get to know React / Redux, Express, MongoDB and Material-UI.
 
 ![Recipes Overview Page](src/images/RecipesOverview.png)
 ![Recipe Page](src/images/Recipe.png)
@@ -21,7 +21,7 @@ While working on this app we followed these steps:
 
 ## Running Locally
 
-Make sure you have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/lang/en/) installed.
+Make sure you have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/lang/en/) installed and the [backend](https://github.com/Abohte/recipes-express) running.
 
 ```bash
 git clone git@github.com:Abohte/recipes-react.git
